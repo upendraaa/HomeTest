@@ -19,7 +19,10 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
-
+/*
+I have not taken care of Error handling scenarios,
+Some of thing can be done in the better way.
+ */
 public class DisplayFragment extends Fragment {
 
 

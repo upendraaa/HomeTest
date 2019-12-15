@@ -51,6 +51,7 @@ public class DataViewModel extends ViewModel implements LifecycleObserver {
 
         if (responseData != null && responseData.getValue().length() > 10) {
             tenthCharacter.setValue(responseData.getValue().substring(9, 10));
+            Log.v("Data: ",responseData.getValue());
         }
     }
 
