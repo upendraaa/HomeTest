@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.DisplayFragment">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:textSize="@dimen/font_size_regular"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_margin="@dimen/margin_small"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/header1"
+        android:id="@+id/tvHeader1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:textSize="@dimen/font_size_regular"
+        android:textColor="@color/black"
+        android:id="@+id/tvFirstData"
+        android:layout_width="0dp"
+        android:layout_margin="@dimen/margin_small"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvHeader1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="@string/hello_blank_fragment" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:textSize="@dimen/font_size_regular"
+        android:textStyle="bold"
+        android:layout_margin="@dimen/margin_small"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/tvFirstData"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/header2"
+        android:id="@+id/tvHeader2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:textSize="@dimen/font_size_regular"
+        android:id="@+id/tvSecondData"
+        android:textColor="@color/black"
+        android:layout_width="0dp"
+        android:layout_margin="@dimen/margin_small"
+        android:layout_height="0dp"
+        android:scrollbars="vertical"
+        app:layout_constraintTop_toBottomOf="@id/tvHeader2"
+        app:layout_constraintBottom_toTopOf="@id/guideLine"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="@string/hello_blank_fragment" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".4"
+        />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:textSize="@dimen/font_size_regular"
+        android:textStyle="bold"
+        android:layout_margin="@dimen/margin_small"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/guideLine"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/header3"
+        android:id="@+id/tvHeader3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:textSize="@dimen/font_size_regular"
+        android:textColor="@color/black"
+        android:id="@+id/tvThirdData"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scrollbars="vertical"
+        android:layout_margin="@dimen/margin_small"
+        app:layout_constraintTop_toBottomOf="@id/tvHeader3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btnSubmit"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="@string/hello_blank_fragment" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSubmit"
+        android:textColor="@color/white"
+        android:text="Submit"
+        android:background="@color/colorPrimary"
+        android:layout_margin="@dimen/margin_small"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/button_height"/>
+
+    <ProgressBar
+        android:visibility="gone"
+        android:id="@+id/progress_circular"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
